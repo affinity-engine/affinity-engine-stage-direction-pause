@@ -6,6 +6,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('ember-theater', function() {
+    this.route('test-scenarios', function() {
+      this.route('director', function() {
+        this.route('directions', function() {
+          this.route('pause');
+        });
+      });
+    });
+  });
 });
 
 export default Router;
