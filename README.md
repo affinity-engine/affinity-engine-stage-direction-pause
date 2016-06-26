@@ -1,6 +1,6 @@
-[![npm version](https://badge.fury.io/js/ember-theater-director-pause.svg)](https://badge.fury.io/js/ember-theater-director-pause)
-[![Build Status](https://travis-ci.org/ember-theater/ember-theater-director-pause.svg?branch=master)](https://travis-ci.org/ember-theater/ember-theater-director-pause)
+[![npm version](https://badge.fury.io/js/affinity-engine-stage-pause.svg)](https://badge.fury.io/js/affinity-engine-stage-pause)
+[![Build Status](https://travis-ci.org/affinity-engine/affinity-engine-stage-pause.svg?branch=master)](https://travis-ci.org/affinity-engine/affinity-engine-stage-pause)
 
-# ember-theater-director-pause
+# affinity-engine-stage-pause
 
-You'll find the interactive guides [here](http://www.ember.theater/learn/director/directions/pause).
+You'll find the interactive guides [here](http://www.ember.engine/learn/stage/directions/pause).

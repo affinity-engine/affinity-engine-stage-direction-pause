@@ -1,7 +1,7 @@
 {
-  "name": "ember-theater-director-pause",
+  "name": "affinity-engine-stage-pause",
   "version": "0.0.0",
-  "description": "Pause an Ember Theater Director script",
+  "description": "Pause an Affinity Engine Stage script",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "https://github.com/ember-theater/ember-theater-director-pause",
+  "repository": "https://github.com/affinity-engine/affinity-engine-stage-pause",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -40,16 +40,16 @@
     "ember-load-initializers": "^0.5.1",
     "ember-moment": "6.1.0",
     "ember-resolver": "^2.0.3",
-    "ember-theater": "git+https://github.com/ember-theater/ember-theater.git#v2",
-    "ember-theater-director": "git+https://github.com/ember-theater/ember-theater-director.git",
+    "affinity-engine": "git+https://github.com/affinity-engine/affinity-engine.git",
+    "affinity-engine-stage": "git+https://github.com/affinity-engine/affinity-engine-stage.git",
     "ember-try": "^0.2.2",
     "loader.js": "^4.0.1"
   },
   "keywords": [
     "ember-addon",
-    "ember-theater",
-    "ember-theater-director",
-    "ember-theater-director direction"
+    "affinity-engine",
+    "affinity-engine-stage",
+    "affinity-engine-stage direction"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
@@ -58,9 +58,9 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://www.ember.theater/learn/director/directions/pause",
+    "demoURL": "http://www.ember.engine/learn/director/directions/pause",
     "after": [
-      "ember-theater-director"
+      "affinity-engine-stage"
     ]
   }
 }

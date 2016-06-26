@@ -10,7 +10,7 @@ function getParentApp(app) {
 }
 
 module.exports = {
-  name: 'ember-theater-director-pause',
+  name: 'affinity-engine-stage-pause',
 
   included: function(app) {
     this._super.included(app);

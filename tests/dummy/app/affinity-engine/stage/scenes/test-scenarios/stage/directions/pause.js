@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { Scene, step } from 'ember-theater-director';
+import { Scene, step } from 'affinity-engine-stage';
 import { hook } from 'ember-hook';
 
 const { RSVP: { Promise } } = Ember;

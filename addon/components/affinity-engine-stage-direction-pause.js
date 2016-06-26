@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import { EKMixin, keyUp } from 'ember-keyboard';
 import multiton from 'ember-multiton-service';
-import { DirectableComponentMixin } from 'ember-theater-director';
+import { DirectableComponentMixin } from 'affinity-engine-stage';
 
 const {
   Component,
@@ -14,7 +14,7 @@ const { computed: { alias } } = Ember;
 const { run: { later } } = Ember;
 
 export default Component.extend(DirectableComponentMixin, EKMixin, {
-  producer: multiton('ember-theater/producer', 'theaterId'),
+  producer: multiton('affinity-engine/producer', 'engineId'),
 
   keyboardActivated: alias('producer.isFocused'),
 

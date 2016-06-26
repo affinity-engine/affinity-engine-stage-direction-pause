@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { Direction } from 'ember-theater-director';
+import { Direction } from 'affinity-engine-stage';
 
 const {
   get,
@@ -8,7 +8,7 @@ const {
 } = Ember;
 
 export default Direction.extend({
-  componentPath: 'ember-theater-director-direction-pause',
+  componentPath: 'affinity-engine-stage-direction-pause',
   layer: 'meta.pause',
 
   _setup(...args) {

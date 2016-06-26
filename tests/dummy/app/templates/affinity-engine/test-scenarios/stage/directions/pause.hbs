@@ -1,0 +1,5 @@
+{{#affinity-engine engineId="pause-direction" fixtures=fixtures config=config isFocused=true as |engine|}}
+  {{affinity-engine-stage engineId=engine.engineId initialScene="test-scenarios/stage/directions/pause"}}
+{{/affinity-engine}}
+
+<div data-test={{hook "data"}}></div>

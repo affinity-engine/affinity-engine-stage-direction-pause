@@ -3,7 +3,7 @@ import { test } from 'qunit';
 import moduleForAcceptance from '../../../../tests/helpers/module-for-acceptance';
 import { hook } from 'ember-hook';
 
-moduleForAcceptance('Acceptance | ember-theater/director/directions/pause', {
+moduleForAcceptance('Acceptance | affinity-engine/stage/directions/pause', {
   beforeEach() {
     Ember.$.Velocity.mock = true;
   },
@@ -13,10 +13,10 @@ moduleForAcceptance('Acceptance | ember-theater/director/directions/pause', {
   }
 });
 
-test('Ember Theater | Director | Directions | Pause', function(assert) {
+test('Affinity Engine | Director | Directions | Pause', function(assert) {
   assert.expect(10);
 
-  visit('/ember-theater/test-scenarios/director/directions/pause').then(() => {
+  visit('/affinity-engine/test-scenarios/stage/directions/pause').then(() => {
     return step();
   }).then(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '', 'still awaiting');
