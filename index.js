@@ -10,7 +10,7 @@ function getParentApp(app) {
 }
 
 module.exports = {
-  name: 'affinity-engine-stage-pause',
+  name: 'affinity-engine-stage-direction-pause',
 
   included: function(app) {
     this._super.included(app);

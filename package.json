@@ -1,5 +1,5 @@
 {
-  "name": "affinity-engine-stage-pause",
+  "name": "affinity-engine-stage-direction-pause",
   "version": "0.0.0",
   "description": "Pause an Affinity Engine Stage script",
   "directories": {
@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "https://github.com/affinity-engine/affinity-engine-stage-pause",
+  "repository": "https://github.com/affinity-engine/affinity-engine-stage-direction-pause",
   "engines": {
     "node": ">= 0.10.0"
   },

@@ -1,1 +1,1 @@
-export { default } from 'affinity-engine-stage-pause/components/affinity-engine-stage-direction-pause';
+export { default } from 'affinity-engine-stage-direction-pause/components/affinity-engine-stage-direction-pause';
