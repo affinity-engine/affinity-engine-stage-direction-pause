@@ -14,9 +14,9 @@ const { computed: { alias } } = Ember;
 const { run: { later } } = Ember;
 
 export default Component.extend(DirectableComponentMixin, EKMixin, {
-  producer: multiton('affinity-engine/producer', 'engineId'),
+  stateManager: multiton('affinity-engine/state-manager', 'engineId'),
 
-  keyboardActivated: alias('producer.isFocused'),
+  keyboardActivated: alias('stateManager.isFocused'),
 
   didInitAttrs(...args) {
     this._super(...args);

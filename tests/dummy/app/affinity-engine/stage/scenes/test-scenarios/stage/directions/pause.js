@@ -19,19 +19,19 @@ export default Scene.extend({
 
     await step();
 
-    await script.pause('a');
+    await script.pause('KeyA');
 
     $data.text('2');
 
     await step();
 
-    await script.pause('a', 100);
+    await script.pause('KeyA', 100);
 
     $data.text('3');
 
     await step();
 
-    await script.pause('a', 100);
+    await script.pause('KeyA', 100);
 
     $data.text('4');
 

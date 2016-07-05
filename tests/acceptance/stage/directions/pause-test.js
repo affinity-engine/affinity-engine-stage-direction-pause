@@ -29,7 +29,7 @@ test('Affinity Engine | Director | Directions | Pause', function(assert) {
   }).then(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '1', 'still waiting');
 
-    return keyUp('a');
+    return keyUp('KeyA');
   }).then(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '2', 'waited until keyup');
 
@@ -37,7 +37,7 @@ test('Affinity Engine | Director | Directions | Pause', function(assert) {
   }).then(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '2', 'still waiting');
 
-    return keyUp('a');
+    return keyUp('KeyA');
   }).then(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '3', 'waited until keyup, rather than 100ms');
 
