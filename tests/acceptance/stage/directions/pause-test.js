@@ -3,15 +3,7 @@ import { test } from 'qunit';
 import moduleForAcceptance from '../../../../tests/helpers/module-for-acceptance';
 import { hook } from 'ember-hook';
 
-moduleForAcceptance('Acceptance | affinity-engine/stage/directions/pause', {
-  beforeEach() {
-    Ember.$.Velocity.mock = true;
-  },
-
-  afterEach() {
-    Ember.$.Velocity.mock = false;
-  }
-});
+moduleForAcceptance('Acceptance | affinity-engine/stage/directions/pause');
 
 test('Affinity Engine | Director | Directions | Pause', function(assert) {
   assert.expect(10);
