@@ -1,6 +1,6 @@
 import Ember from 'ember';
-import { EKMixin, keyUp } from 'ember-keyboard';
 import { DirectableComponentMixin } from 'affinity-engine-stage';
+import { EKMixin, keyUp } from 'ember-keyboard';
 
 const {
   Component,
@@ -26,13 +26,13 @@ export default Component.extend(DirectableComponentMixin, EKMixin, {
   didInsertElement(...args) {
     this._super(...args);
 
-    const attrs = get(this, 'directable.attrs');
+    const directable = get(this, 'directable');
 
     const {
       duration,
       keys,
       promise
-    } = getProperties(attrs, 'duration', 'keys', 'promise');
+    } = getProperties(directable, 'duration', 'keys', 'promise');
 
     if (isPresent(keys)) {
       this._setupKeyPressWatcher(keys);
