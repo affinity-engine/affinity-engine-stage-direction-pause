@@ -20,45 +20,57 @@ const syncStep = function() {
 test('Affinity Engine | Director | Directions | Pause', function(assert) {
   assert.expect(10);
 
-  visit('/affinity-engine/test-scenarios/stage/directions/pause').then(() => {
+  visit('/affinity-engine/test-scenarios/stage/directions/pause');
+
+  andThen(() => {
     syncStep();
 
     assert.equal(Ember.$(hook('data')).text().trim(), '', 'still awaiting');
+  });
 
-    return delay(200);
-  }).then(() => {
+  delay(200);
+
+  andThen(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '1', 'waited 100ms');
 
     syncStep();
 
     assert.equal(Ember.$(hook('data')).text().trim(), '1', 'still waiting');
+  });
 
-    return keyUp('KeyA');
-  }).then(() => {
+  keyUp('KeyA');
+
+  andThen(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '2', 'waited until keyup');
 
     syncStep();
 
     assert.equal(Ember.$(hook('data')).text().trim(), '2', 'still waiting');
+  });
 
-    return keyUp('KeyA');
-  }).then(() => {
+  keyUp('KeyA');
+
+  andThen(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '3', 'waited until keyup, rather than 100ms');
 
     syncStep();
 
     assert.equal(Ember.$(hook('data')).text().trim(), '3', 'still waiting');
+  });
 
-    return delay(300);
-  }).then(() => {
+  delay(300);
+
+  andThen(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '4', 'waited until 100ms, rather than keyup');
 
     syncStep();
 
     assert.equal(Ember.$(hook('data')).text().trim(), '4', 'still waiting');
+  });
 
-    return delay(300);
-  }).then(() => {
+  delay(300);
+
+  andThen(() => {
     assert.equal(Ember.$(hook('data')).text().trim(), '5', 'waited until promise resolved');
   });
 });

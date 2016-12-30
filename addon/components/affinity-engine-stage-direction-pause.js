@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import { DirectableComponentMixin } from 'affinity-engine-stage';
+import { task } from 'ember-concurrency';
 import { EKMixin, keyUp } from 'ember-keyboard';
 
 const {
@@ -40,13 +41,13 @@ export default Component.extend(DirectableComponentMixin, EKMixin, {
 
     if (isPresent(duration)) {
       later(() => {
-        this._resolve();
+        get(this, '_resolveTask').perform();
       }, duration);
     }
 
     if (isPresent(promise)) {
       promise.then(() => {
-        this._resolve();
+        get(this, '_resolveTask').perform();
       });
     }
   },
@@ -54,12 +55,16 @@ export default Component.extend(DirectableComponentMixin, EKMixin, {
   willDestroyElement(...args) {
     this._super(...args);
 
-    this._resolve();
+    get(this, '_resolveTask').perform();
   },
 
   _resolve() {
-    this.resolveAndDestroy();
+    get(this, '_resolveTask').perform();
   },
+
+  _resolveTask: task(function * () {
+    this.resolveAndDestroy();
+  }).drop(),
 
   _setupKeyPressWatcher(keys) {
     keys.forEach((key) => {
