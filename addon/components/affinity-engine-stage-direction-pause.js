@@ -20,7 +20,7 @@ export default Component.extend(DirectableComponentMixin, EKMixin, {
     this._super(...args);
 
     if (get(this, 'priorSceneRecord') === '_RESOLVED') {
-      this.resolveAndDestroy(true);
+      this.resolveAndDestroy();
     }
   },
 
