@@ -16,14 +16,6 @@ const { run: { later } } = Ember;
 export default Component.extend(DirectableComponentMixin, EKMixin, {
   keyboardActivated: alias('isFocused'),
 
-  init(...args) {
-    this._super(...args);
-
-    if (get(this, 'priorSceneRecord') === '_RESOLVED') {
-      this.resolveAndDestroy();
-    }
-  },
-
   didInsertElement(...args) {
     this._super(...args);
 
