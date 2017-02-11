@@ -3,4 +3,4 @@
 
 # affinity-engine-stage-direction-pause
 
-You'll find the interactive guides [here](http://www.affinityengine.org/components/stage/directions/pause).
+You'll find the interactive guides [here](http://www.affinityengine.org/#/components/stage/directions/pause).

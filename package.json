@@ -1,6 +1,6 @@
 {
   "name": "affinity-engine-stage-direction-pause",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Pause an Affinity Engine Stage script",
   "keywords": [
     "ember-addon",
@@ -24,8 +24,8 @@
     "ember-cli-babel": "^5.1.7"
   },
   "devDependencies": {
-    "affinity-engine": "git+https://github.com/affinity-engine/affinity-engine.git",
-    "affinity-engine-stage": "git+https://github.com/affinity-engine/affinity-engine-stage.git",
+    "affinity-engine": "^0.1.0",
+    "affinity-engine-stage": "^0.1.0",
     "babel-eslint": "^6.0.4",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
@@ -53,7 +53,7 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://www.affinityengine.org/components/stage/directions/random",
+    "demoURL": "http://www.affinityengine.org/#/components/stage/directions/random",
     "after": [
       "affinity-engine"
     ]
