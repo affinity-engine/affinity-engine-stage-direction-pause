@@ -1,6 +1,6 @@
 {
   "name": "affinity-engine-stage-direction-pause",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pause an Affinity Engine Stage script",
   "keywords": [
     "ember-addon",
@@ -53,7 +53,7 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://www.affinityengine.org/#/components/stage/directions/random",
+    "demoURL": "http://www.affinityengine.org/#/stage/directions/random",
     "after": [
       "affinity-engine"
     ]
