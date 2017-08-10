@@ -19,16 +19,18 @@ export default Component.extend(DirectableComponentMixin, EKMixin, {
   didInsertElement(...args) {
     this._super(...args);
 
-    const directable = get(this, 'directable');
+    const configuration = get(this, 'direction.configuration');
 
     const {
       duration,
       keys,
       promise
-    } = getProperties(directable, 'duration', 'keys', 'promise');
+    } = getProperties(configuration, 'duration', 'keys', 'promise');
 
-    if (isPresent(keys)) {
-      this._setupKeyPressWatcher(keys);
+    const acceptKeys = get(keys, 'accept');
+
+    if (isPresent(acceptKeys)) {
+      this._setupKeyPressWatcher(acceptKeys);
     }
 
     if (isPresent(duration)) {
