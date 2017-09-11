@@ -19,7 +19,7 @@ export default Component.extend(DirectableComponentMixin, EKMixin, {
   didInsertElement(...args) {
     this._super(...args);
 
-    const configuration = get(this, 'direction.configuration');
+    const configuration = get(this, 'direction.configuration.attrs');
 
     const {
       duration,
@@ -57,7 +57,7 @@ export default Component.extend(DirectableComponentMixin, EKMixin, {
   },
 
   _resolveTask: task(function * () {
-    this.resolveAndDestroy();
+    yield this.resolveAndDestroy();
   }).drop(),
 
   _setupKeyPressWatcher(keys) {

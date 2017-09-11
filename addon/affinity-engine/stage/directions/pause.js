@@ -9,14 +9,14 @@ const {
 
 export default Direction.extend({
   componentPath: 'affinity-engine-stage-direction-pause',
-  layer: 'meta.pause',
 
   config: multiton('affinity-engine/config', 'engineId'),
 
   _configurationTiers: [
-    'global',
-    'component.stage',
-    'component.stage.direction.pause'
+    'component.stage.direction.pause',
+    'component.stage.direction.every',
+    'component.stage.every',
+    'children'
   ],
 
   _setup: cmd({ async: true, render: true }, function(...args) {
