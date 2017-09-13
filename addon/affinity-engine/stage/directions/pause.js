@@ -14,9 +14,9 @@ export default Direction.extend({
 
   _configurationTiers: [
     'component.stage.direction.pause',
-    'component.stage.direction.every',
-    'component.stage.every',
-    'children'
+    'component.stage.direction.all',
+    'component.stage.all',
+    'all'
   ],
 
   _setup: cmd({ async: true, render: true }, function(...args) {
