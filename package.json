@@ -1,6 +1,6 @@
 {
   "name": "affinity-engine-stage-direction-pause",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Pause an Affinity Engine Stage script",
   "keywords": [
     "ember-addon",
